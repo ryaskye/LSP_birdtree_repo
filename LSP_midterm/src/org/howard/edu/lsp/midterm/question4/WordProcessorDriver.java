@@ -1,10 +1,13 @@
 package org.howard.edu.lsp.midterm.question4;
 
 import java.util.List;
+/**
+ *debugged on chat gpt shows all 6 test cases
+ */
 
 public class WordProcessorDriver {
     public static void main(String[] args) {
-       //debugged on chatgpt
+      
     	// Test case 1
         WordProcessor wp4 = new WordProcessor("This is a test with amazing results amazing achievements!");
         List<String> longestWords4 = wp4.findLongestWords();

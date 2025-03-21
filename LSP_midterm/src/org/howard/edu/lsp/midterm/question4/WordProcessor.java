@@ -2,6 +2,9 @@ package org.howard.edu.lsp.midterm.question4;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * used google for starter code and for guidance for import  
+ */
 
 public class WordProcessor {
     private String sentence; 
