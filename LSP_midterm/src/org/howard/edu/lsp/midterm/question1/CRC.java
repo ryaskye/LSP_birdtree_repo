@@ -1,12 +1,15 @@
 package org.howard.edu.lsp.midterm.question1;
 
 public class CRC {
+	/**
+	 * includes all parts 4 different classes under is the responsibilities and collaborators 
+	 */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*
 		*
-		 Part 1: Identify Classes
+		
 
 		1. Book Class (Represents individual books in the library)
 		   - Track book availability

@@ -24,7 +24,7 @@ public class Movie implements Streamable {
         System.out.println("Stopped movie: " + movieTitle);
     }
 
-    // Movie-specific behavior
+    // Movie behavior
     public void rewind(int seconds) {
         System.out.println("Rewinding movie: " + movieTitle + " by " + seconds + " seconds");
     }

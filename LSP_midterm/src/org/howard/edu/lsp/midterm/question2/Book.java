@@ -1,5 +1,7 @@
 package org.howard.edu.lsp.midterm.question2;
-
+/**
+ * starter code from google
+ */
 public class Book {
     private String title;
     private String author;

@@ -1,7 +1,7 @@
 package org.howard.edu.lsp.midterm.question5;
 
 /**
- * used google for starter code
+ * used google for starter code and notes from class
  */
 
 public class music implements Streamable {
@@ -26,7 +26,7 @@ public class music implements Streamable {
         System.out.println("Stopped music: " + songTitle);
     }
 
-    // Music-specific behavior
+    // Music behavior
     public void addToPlaylist(String playlistName) {
         System.out.println("Added " + songTitle + " to " + playlistName + " playlist");
     }
