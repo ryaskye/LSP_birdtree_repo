@@ -1,5 +1,7 @@
 package org.howard.edu.lsp.midterm.question3;
-
+/**
+ * debugged on chat gpt and help from google
+ */
 public class VotingMachineTest {
     public static void main(String[] args) {
         // Create a new VotingMachine instance
