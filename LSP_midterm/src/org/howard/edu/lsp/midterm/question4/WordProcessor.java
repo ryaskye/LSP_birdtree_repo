@@ -5,7 +5,7 @@ import java.util.List;
 
 public class WordProcessor {
     private String sentence; 
-    //starter code  from google debugged on chatgpt
+    //starter code  from google debugged onchatgpt
     // Constructor to initialize the sentence
     public WordProcessor(String sentence) {
         this.sentence = sentence;
