@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver.java - JavaDocs</title>
+</head>
+<body>
+    <h1>Driver Class Documentation</h1>
+    <p><strong>Author:</strong> Rya McKinnon (Student ID: 03056867)</p>
+    <p><strong>Used Resources:</strong> Google (for union and intersection), ChatGPT (for debugging)</p>
+
+    <h2>Class Overview</h2>
+    <p>
+        This class demonstrates the use of the IntegerSet class by performing several operations such as union, intersection, difference, and others.
+        The main method showcases the use of the IntegerSet class and its methods.
+    </p>
+
+    <h2>Method: main</h2>
+    <p>
+        The main method is the entry point of the Driver class. It demonstrates the creation and manipulation of IntegerSet objects.
+        It performs the union, intersection, and difference operations and tests various methods like <code>add()</code>, <code>remove()</code>, <code>contains()</code>, and <code>isEmpty()</code>.
+    </p>
+    
+    <h3>Method Signature:</h3>
+    <pre>
+    public static void main(String[] args)
+    </pre>
+
+    <h3>Description:</h3>
+    <p>
+        The main method performs the following operations:
+        <ul>
+            <li>Creates two sets and adds elements to them.</li>
+            <li>Performs union between Set1 and Set2.</li>
+            <li>Performs intersection between Set1 and Set2.</li>
+            <li>Performs the difference between Set1 and Set2.</li>
+            <li>Tests the <code>remove()</code>, <code>contains()</code>, and <code>isEmpty()</code> methods.</li>
+        </ul>
+    </p>
+
+    <h3>Example Usage:</h3>
+    <pre>
+    IntegerSet set1 = new IntegerSet();
+    set1.add(1);
+    set1.add(2);
+    set1.add(3);
+    
+    System.out.println("Value of Set1 is: " + set1.toString());
+    System.out.println("Smallest value in Set1 is: " + set1.smallest());
+    System.out.println("Largest value in Set1 is: " + set1.largest());
+    </pre>
+
+    <h2>Code Walkthrough</h2>
+    <p>The main method is divided into several parts, each of which tests a different functionality of the IntegerSet class:</p>
+    <ul>
+        <li><strong>Set1 creation and testing:</strong> The method creates <code>set1</code>, adds elements 1, 2, and 3 to it, and then prints the values in <code>set1</code> along with its smallest and largest elements.</li>
+        <li><strong>Set2 creation and testing:</strong> The method creates <code>set2</code>, adds elements 3, 4, and 5 to it, and then performs the union of <code>set1</code> and <code>set2</code>, printing the results.</li>
+        <li><strong>Intersection operation:</strong> Clears <code>set1</code>, adds 1, 2, and 3, and then performs the intersection with <code>set2</code>, printing the resulting set.</li>
+        <li><strong>Difference operation:</strong> Clears <code>set1</code>, adds 1, 2, and 3, and then performs the difference operation between <code>set1</code> and <code>set2</code>, printing the result.</li>
+        <li><strong>Testing contains, remove, and isEmpty:</strong> Tests the <code>contains()</code>, <code>remove()</code>, and <code>isEmpty()</code> methods, printing the results after adding and removing elements from <code>set1</code>.</li>
+    </ul>
+
+    <h2>Code Example:</h2>
+    <pre>
+    public static void main(String[] args) {
+        IntegerSet set1 = new IntegerSet();
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+        
+        System.out.println("Value of Set1 is: " + set1.toString());
+        System.out.println("Smallest value in Set1 is: " + set1.smallest());
+        System.out.println("Largest value in Set1 is: " + set1.largest());
+       
+        IntegerSet set2 = new IntegerSet();
+        set2.add(3);
+        set2.add(4);
+        set2.add(5);
+        
+        System.out.println("\nUnion of Set1 and Set2");
+        set1.union(set2);
+        System.out.println("Result of union of Set1 and Set2: " + set1.toString());
+
+        set1.clear();
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+
+        System.out.println("\nIntersection of Set1 and Set2");
+        set1.intersect(set2);
+        System.out.println("Result of intersection of Set1 and Set2: " + set1.toString());
+
+        set1.clear();
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+
+        System.out.println("\nDifference of Set1 - Set2");
+        set1.diff(set2);
+        System.out.println("Result of difference of Set1 - Set2: " + set1.toString());
+
+        System.out.println("\nTesting contains, remove, and isEmpty");
+        set1.add(2);
+        System.out.println("Set1 contains 2: " + set1.contains(2));
+        set1.remove(2);
+        System.out.println("Set1 contains 2 after removal: " + set1.contains(2));
+        System.out.println("Is Set1 empty? " + set1.isEmpty());
+        set1.clear();
+        System.out.println("Is Set1 empty after clear? " + set1.isEmpty());
+    }
+    </pre>
+
+</body>
+</html>

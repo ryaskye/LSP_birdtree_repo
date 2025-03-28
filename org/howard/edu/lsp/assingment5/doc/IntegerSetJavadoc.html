@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaDocs for IntegerSet Class</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #2E8B57;
+        }
+        h2 {
+            color: #4682B4;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .method-description {
+            font-weight: bold;
+        }
+        .method-signature {
+            color: #2E8B57;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaDocs for IntegerSet Class</h1>
+    <p><strong>Author:</strong> Rya McKinnon</p>
+    <p><strong>Student ID:</strong> 03056867</p>
+    <p><strong>Dependencies:</strong> Used Google for intersection and union part, ChatGPT for debugging</p>
+
+    <h2>Class Overview</h2>
+    <p>
+        The <strong>IntegerSet</strong> class represents a mathematical set of integers. It uses an ArrayList to store the integers
+        and provides methods for set operations such as union, intersection, difference, and complement.
+    </p>
+
+    <h2>Methods</h2>
+
+    <h3>clear()</h3>
+    <p class="method-description">Clears all elements from the set.</p>
+    <pre class="method-signature">
+public void clear() {
+    set.clear();
+}
+    </pre>
+
+    <h3>length()</h3>
+    <p class="method-description">Returns the number of elements in the set.</p>
+    <pre class="method-signature">
+public int length() {
+    return set.size();
+}
+    </pre>
+
+    <h3>equals(Object o)</h3>
+    <p class="method-description">Checks if two sets are equal.</p>
+    <pre class="method-signature">
+@Override
+public boolean equals(Object o) {
+    if (o == this) return true;
+    if (!(o instanceof IntegerSet)) return false;
+    IntegerSet otherSet = (IntegerSet) o;
+    return new HashSet<>(set).equals(new HashSet<>(otherSet.set));
+}
+    </pre>
+
+    <h3>contains(int value)</h3>
+    <p class="method-description">Returns true if the set contains the value, otherwise false.</p>
+    <pre class="method-signature">
+public boolean contains(int value) {
+    return set.contains(value);
+}
+    </pre>
+
+    <h3>largest()</h3>
+    <p class="method-description">Returns the largest item in the set.</p>
+    <pre class="method-signature">
+public int largest() {
+    if (set.isEmpty()) throw new RuntimeException("Set is empty");
+    return Collections.max(set);
+}
+    </pre>
+
+    <h3>smallest()</h3>
+    <p class="method-description">Returns the smallest item in the set.</p>
+    <pre class="method-signature">
+public int smallest() {
+    if (set.isEmpty()) throw new RuntimeException("Set is empty");
+    return Collections.min(set);
+}
+    </pre>
+
+    <h3>add(int item)</h3>
+    <p class="method-description">Adds an integer to the set if it is not already there.</p>
+    <pre class="method-signature">
+public void add(int item) {
+    if (!set.contains(item)) {
+        set.add(item);
+    }
+}
+    </pre>
+
+    <h3>remove(int item)</h3>
+    <p class="method-description">Removes an integer from the set if it's already there.</p>
+    <pre class="method-signature">
+public void remove(int item) {
+    set.remove(Integer.valueOf(item));
+}
+    </pre>
+
+    <h3>union(IntegerSet intSetb)</h3>
+    <p class="method-description">Performs the union of the current set with another set.</p>
+    <pre class="method-signature">
+public void union(IntegerSet intSetb) {
+    for (int num : intSetb.set) {
+        add(num);
+    }
+}
+    </pre>
+
+    <h3>intersect(IntegerSet intSetb)</h3>
+    <p class="method-description">Performs the intersection of the current set with another set.</p>
+    <pre class="method-signature">
+public void intersect(IntegerSet intSetb) {
+    set.retainAll(intSetb.set);
+}
+    </pre>
+
+    <h3>diff(IntegerSet intSetb)</h3>
+    <p class="method-description">Performs the difference of the current set with another set.</p>
+    <pre class="method-signature">
+public void diff(IntegerSet intSetb) {
+    set.removeAll(intSetb.set);
+}
+    </pre>
+
+    <h3>complement(IntegerSet intSetb)</h3>
+    <p class="method-description">Computes the complement of the set with another set (elements not in the first set).</p>
+    <pre class="method-signature">
+public void complement(IntegerSet intSetb) {
+    System.out.println("Complement operation not applicable without a universal set.");
+}
+    </pre>
+
+    <h3>isEmpty()</h3>
+    <p class="method-description">Returns true if the set is empty, false otherwise.</p>
+    <pre class="method-signature">
+public boolean isEmpty() {
+    return set.isEmpty();
+}
+    </pre>
+
+    <h3>toString()</h3>
+    <p class="method-description">Returns a string representation of the set.</p>
+    <pre class="method-signature">
+@Override
+public String toString() {
+    return set.toString();
+}
+    </pre>
+
+</body>
+</html>
